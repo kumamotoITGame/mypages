@@ -2,15 +2,19 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>ゲームポートフォリオ</title>
+  <title>ポートフォリオ</title>
   <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background-color: #0f172a;
-      color: #e2e8f0;
-    }
 
+    body {
+        background-color: #1e1e1e;
+        color: #e2e8f0;
+        background-image:
+            linear-gradient(45deg, #2a2a2a 25%, transparent 25%),
+            linear-gradient(-45deg, #2a2a2a 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, #2a2a2a 75%),
+            linear-gradient(-45deg, transparent 75%, #2a2a2a 75%);
+        background-size: 20px 20px;
+    }
     header {
       background: linear-gradient(90deg, #1e293b, #0f172a);
       padding: 30px;
@@ -37,6 +41,7 @@
     }
 
     .games {
+      margin-top: 30px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
@@ -82,7 +87,7 @@
 <body>
 
 <header>
-  <h1>My Game Portfolio</h1>
+  <h1>Portfolio</h1>
   <p>ゲーム開発作品集</p>
 </header>
 
@@ -90,10 +95,77 @@
 
   <section class="profile">
     <h2>👤 自己紹介</h2>
+
+    <img src="profile.png" alt="プロフィール画像">
+
+
+    <h1>大原学園 熊本情報ITクリエイター専門学校</h1>
+
+    <h2>プロフィール</h2>
+    <ul>
+        <li>学年：〇年生</li>
+        <li>専攻：〇〇</li>
+        <li>趣味：ゲーム・音楽・YouTube</li>
+        <li>好きな食べ物：ラーメン</li>
+    </ul>
+
+    <h2>プロフィール</h2>
+    <ul>
+        <li>学  年：2年生</li>
+        <li>コース：ゲーム制作 2年制</li>
+        <li>使用言語：C/C++言語 / Unity・Unreal Engine</li>
+        <li>趣  味：ゲーム・動画視聴・音楽</li>
+    </ul>
+
+    <h2>自己紹介</h2>
     <p>
-      ここに自己紹介を書きます。<br>
-      使用技術：Unity / Unreal Engine / C# など
+        現在、大原学園でゲーム制作を学んでいます。<br>
+        授業を通してC++やHLSLに興味を持ち、ゲーム制作の勉強を始めました。<br>
+        まだまだ初心者ですが、少しずつできることを増やしていきたいと思っています。
     </p>
+
+    <h2>ひとこと</h2>
+    <p>将来はPCアクションゲーム系の仕事に関われるように頑張ります！</p>
+
+
+    <h2>スキル</h2>
+
+    <h3>プログラミング言語</h3>
+    <ul>
+        <li>C#（3年）</li>
+        <li>C/C++（3年）</li>
+        <li>HLSL（1年)</li>
+        <li>Python（3ヶ月）</li>
+    </ul>
+
+    <h3>ゲーム開発環境</h3>
+    <ul>
+        <li>Unity（3年半）</li>
+        <li>Unreal Engine（3年半）</li>
+        <li>DX ライブラリ（半年）</li>
+    </ul>
+
+    <h3>音楽制作</h3>
+    <ul>
+        <li>Cubase（3年半）</li>
+    </ul>
+
+    <h3>イラスト</h3>
+    <ul>
+        <li>Photoshop（3年）</li>
+    </ul>
+
+    <h3>3Dモデリング</h3>
+    <ul>
+        <li>Maya（3年）</li>
+    </ul>
+
+    <h3>エディタ</h3>
+    <ul>
+        <li>Visual Studio</li>
+        <li>Visual Studio Code</li>
+    </ul>
+
   </section>
 
   <section>
@@ -105,30 +177,97 @@
         <img src="https://via.placeholder.com/400x200" alt="ゲーム1">
         <h3>ゲームタイトル1</h3>
         <p>簡単な説明を書きます。</p>
+        <p>ゲームの特徴や工夫点など。</p>
+        <p>ジャンルや制作期間など。</p>
         <a href="#">▶ プレイ / 詳細</a>
       </div>
 
       <div class="card">
         <img src="https://via.placeholder.com/400x200" alt="ゲーム2">
         <h3>ゲームタイトル2</h3>
-        <p>ゲームの特徴や工夫点など。</p>
+        <p>
+            プレイヤーがキャラクターを操作してゴールを目指す、シンプルなアクションゲームです。
+        </p>
+        <p>
+            操作のしやすさを意識し、ジャンプや移動の挙動を調整しました。また、ステージ構成にも工夫を加え、何度も挑戦したくなるような難易度バランスを目指しました。
+        </p>
+        <p>
+            ジャンル：2Dアクションゲーム<br>
+            制作期間：約1か月
+        </p>
         <a href="#">▶ プレイ / 詳細</a>
       </div>
 
       <div class="card">
         <img src="https://via.placeholder.com/400x200" alt="ゲーム3">
         <h3>ゲームタイトル3</h3>
-        <p>ジャンルや制作期間など。</p>
+        <p>
+            敵を倒しながらステージを進んでいく、シンプルなシューティングゲームを制作しました。
+        </p>
+        <p>
+            プレイヤーと敵の当たり判定や弾の挙動など、基本的なゲーム処理の実装に力を入れました。また、スコア機能を追加することで、繰り返し遊べるよう工夫しています。
+        </p>
+        <p>
+            ジャンル：2Dシューティングゲーム<br>
+            制作期間：約1〜2か月
+        </p>
         <a href="#">▶ プレイ / 詳細</a>
       </div>
 
     </div>
+
+    <div class="games">
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200" alt="ゲーム1">
+        <h3>ゲームタイトル1</h3>
+        <p>簡単な説明を書きます。</p>
+        <p>ゲームの特徴や工夫点など。</p>
+        <p>ジャンルや制作期間など。</p>
+        <a href="#">▶ プレイ / 詳細</a>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200" alt="ゲーム2">
+        <h3>ゲームタイトル2</h3>
+        <p>
+            プレイヤーがキャラクターを操作してゴールを目指す、シンプルなアクションゲームです。
+        </p>
+        <p>
+            操作のしやすさを意識し、ジャンプや移動の挙動を調整しました。また、ステージ構成にも工夫を加え、何度も挑戦したくなるような難易度バランスを目指しました。
+        </p>
+        <p>
+            ジャンル：2Dアクションゲーム<br>
+            制作期間：約1か月
+        </p>
+        <a href="#">▶ プレイ / 詳細</a>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200" alt="ゲーム3">
+        <h3>ゲームタイトル3</h3>
+        <p>
+            敵を倒しながらステージを進んでいく、シンプルなシューティングゲームを制作しました。
+        </p>
+        <p>
+            プレイヤーと敵の当たり判定や弾の挙動など、基本的なゲーム処理の実装に力を入れました。また、スコア機能を追加することで、繰り返し遊べるよう工夫しています。
+        </p>
+        <p>
+            ジャンル：2Dシューティングゲーム<br>
+            制作期間：約1〜2か月
+        </p>
+        <a href="#">▶ プレイ / 詳細</a>
+      </div>
+      
+    </div>
+
+
   </section>
 
 </div>
 
 <footer>
-  <p>© 2026 My Portfolio</p>
+  <p>2026 Portfolio</p>
 </footer>
 
 </body>
