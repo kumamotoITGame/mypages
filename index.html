@@ -2,54 +2,133 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>My Website</title>
+  <title>ゲームポートフォリオ</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f5f5f5;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
     }
+
     header {
-      background-color: #333;
-      color: white;
-      padding: 20px;
+      background: linear-gradient(90deg, #1e293b, #0f172a);
+      padding: 30px;
       text-align: center;
     }
-    main {
-      padding: 20px;
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
     }
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
+
+    header p {
+      color: #94a3b8;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .profile {
+      margin-bottom: 40px;
+    }
+
+    .games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #1e293b;
+      border-radius: 10px;
+      padding: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
       width: 100%;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin: 10px 0 5px;
+    }
+
+    .card p {
+      font-size: 0.9em;
+      color: #cbd5f5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #64748b;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>ようこそ！</h1>
-  <p>私のホームページへ</p>
+  <h1>My Game Portfolio</h1>
+  <p>ゲーム開発作品集</p>
 </header>
 
-<main>
-  <h2>自己紹介</h2>
-  <p>ここに自己紹介を書きます。</p>
+<div class="container">
 
-  <h2>コンテンツ</h2>
-  <ul>
-    <li>作品1</li>
-    <li>作品2</li>
-    <li>作品3</li>
-  </ul>
-</main>
+  <section class="profile">
+    <h2>👤 自己紹介</h2>
+    <p>
+      ここに自己紹介を書きます。<br>
+      使用技術：Unity / Unreal Engine / C# など
+    </p>
+  </section>
+
+  <section>
+    <h2>🎮 制作ゲーム</h2>
+
+    <div class="games">
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200" alt="ゲーム1">
+        <h3>ゲームタイトル1</h3>
+        <p>簡単な説明を書きます。</p>
+        <a href="#">▶ プレイ / 詳細</a>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200" alt="ゲーム2">
+        <h3>ゲームタイトル2</h3>
+        <p>ゲームの特徴や工夫点など。</p>
+        <a href="#">▶ プレイ / 詳細</a>
+      </div>
+
+      <div class="card">
+        <img src="https://via.placeholder.com/400x200" alt="ゲーム3">
+        <h3>ゲームタイトル3</h3>
+        <p>ジャンルや制作期間など。</p>
+        <a href="#">▶ プレイ / 詳細</a>
+      </div>
+
+    </div>
+  </section>
+
+</div>
 
 <footer>
-  <p>© 2026 My Website</p>
+  <p>© 2026 My Portfolio</p>
 </footer>
 
 </body>
