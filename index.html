@@ -26,86 +26,103 @@
   
   <title>ポートフォリオ</title>
 
-  <!-- scc文 -->
+  <!-- CSS文 -->
   <style>
 
+    /* ===== 全体設定 ===== */
     body {
-        background-color: #1e1e1e;
-        color: #e2e8f0;
+        background-color: #1e1e1e; /* ダーク背景 */
+        color: #e2e8f0; /* 文字色（薄いグレー） */
+
+        /* チェック柄の背景 */
         background-image:
-            linear-gradient(45deg, #2a2a2a 25%, transparent 25%),
-            linear-gradient(-45deg, #2a2a2a 25%, transparent 25%),
-            linear-gradient(45deg, transparent 75%, #2a2a2a 75%),
-            linear-gradient(-45deg, transparent 75%, #2a2a2a 75%);
+            linear-gradient(45deg, rgba(42,42,42,0.3) 25%, transparent 25%),
+            linear-gradient(-45deg, rgba(42,42,42,0.3) 25%, transparent 25%),
+            linear-gradient(45deg, transparent 75%, rgba(42,42,42,0.3) 75%),
+            linear-gradient(-45deg, transparent 75%, rgba(42,42,42,0.3) 75%);
         background-size: 20px 20px;
     }
+
+    /* ===== ヘッダー ===== */
     header {
-      background: linear-gradient(90deg, #1e293b, #0f172a);
+      background: linear-gradient(90deg, #1e293b, #0f172a); /* グラデーション */
       padding: 30px;
       text-align: center;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.5em; /* タイトル大きめ */
     }
 
     header p {
-      color: #94a3b8;
+      color: #94a3b8; /* サブテキスト */
     }
 
+    /* ===== コンテンツ全体 ===== */
     .container {
       padding: 20px;
-      max-width: 1000px;
-      margin: auto;
+      max-width: 1000px; /* 横幅制限 */
+      margin: auto; /* 中央寄せ */
     }
 
+    /* ===== プロフィール ===== */
     .profile {
       margin-bottom: 40px;
     }
 
-    .games {
-      margin-top: 30px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+    .profile img {
+      width: 150px;
+      border-radius: 50%; /* 円形アイコン */
     }
 
+    /* ===== ゲーム一覧 ===== */
+    .games {
+      margin-top: 30px;
+
+      /* グリッドレイアウト */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px; /* カード間の余白 */
+    }
+
+    /* ===== カード（作品） ===== */
     .card {
       background-color: #1e293b;
       border-radius: 10px;
       padding: 15px;
-      transition: 0.3s;
+      transition: 0.3s; /* ホバーアニメーション */
     }
 
+    /* ホバー時の拡大 */
     .card:hover {
       transform: scale(1.03);
     }
 
+    /* カード内画像 */
     .card img {
       width: 100%;
       border-radius: 8px;
     }
 
+    /* タイトル */
     .card h3 {
       margin: 10px 0 5px;
     }
 
+    /* 説明文 */
     .card p {
       font-size: 0.9em;
       color: #cbd5f5;
     }
 
+    /* ===== フッター ===== */
     footer {
       text-align: center;
       padding: 20px;
       color: #64748b;
     }
 
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
   </style>
 </head>
 <body>
@@ -118,12 +135,12 @@
 <div class="container">
 
   <section class="profile">
-    <h2>👤 自己紹介</h2>
+    <h2>自己紹介</h2>
 
-    <img src="profile.png" alt="プロフィール画像">
+    <img src="myphoto.png" alt="プロフィール画像">
 
 
-    <h1>大原学園 熊本情報ITクリエイター専門学校</h1>
+    <h2>大原学園 熊本情報ITクリエイター専門学校</h2>
 
     <h2>プロフィール</h2>
     <ul>
@@ -139,7 +156,8 @@
     <p>
         現在、大原学園でゲーム制作を学んでいます。<br>
         授業を通してC++やHLSLに興味を持ち、ゲーム制作の勉強を始めました。<br>
-        まだまだ初心者ですが、少しずつできることを増やしていきたいと思っています。
+        UI実装に特に興味を持ち、ゲーム制作の中でもユーザーが直感的に操作できるインターフェース作りを意識して学習しています。<br>
+        まだまだ初心者ですが、使いやすさや見やすさを考えながら、少しずつ実装力を高めていきたいと思っています。
     </p>
 
     <h2>ひとこと</h2>
@@ -184,24 +202,34 @@
         <li>Visual Studio Code</li>
     </ul>
 
+    <h3>趣味</h3>
+    <ul>
+      <li>ゲーム</li>
+      <li>動画鑑賞</li>
+      <li>音楽</li>
+    </ul>
+
   </section>
 
   <section>
-    <h2>🎮 制作ゲーム</h2>
+    <h2>制作ゲーム</h2>
 
     <div class="games">
 
       <div class="card">
-        <img src="https://via.placeholder.com/400x200" alt="ゲーム1">
+        <a href="https://suupia.github.io/my-portfolio/">
+          <img src="game00_Title.png" alt="ゲーム画像">
+        </a>
         <h3>ゲームタイトル1</h3>
         <p>簡単な説明を書きます。</p>
         <p>ゲームの特徴や工夫点など。</p>
         <p>ジャンルや制作期間など。</p>
-        <a href="#">▶ プレイ / 詳細</a>
       </div>
 
       <div class="card">
-        <img src="https://via.placeholder.com/400x200" alt="ゲーム2">
+        <a href="https://play.unity.com/en/games/9cd3bfe4-35a1-48f2-b5bb-a86d8fc108e6/webgl-builds">
+          <img src="game01_Title.png" alt="ゲーム画像">
+        </a>
         <h3>ゲームタイトル2</h3>
         <p>
             プレイヤーがキャラクターを操作してゴールを目指す、シンプルなアクションゲームです。
@@ -213,11 +241,12 @@
             ジャンル：2Dアクションゲーム<br>
             制作期間：約1か月
         </p>
-        <a href="#">▶ プレイ / 詳細</a>
       </div>
 
       <div class="card">
-        <img src="https://via.placeholder.com/400x200" alt="ゲーム3">
+        <a href="https://suupia.github.io/my-portfolio/">
+          <img src="game02_Title.png" alt="ゲーム画像">
+        </a>
         <h3>ゲームタイトル3</h3>
         <p>
             敵を倒しながらステージを進んでいく、シンプルなシューティングゲームを制作しました。
@@ -229,7 +258,6 @@
             ジャンル：2Dシューティングゲーム<br>
             制作期間：約1〜2か月
         </p>
-        <a href="#">▶ プレイ / 詳細</a>
       </div>
 
     </div>
@@ -237,16 +265,19 @@
     <div class="games">
 
       <div class="card">
-        <img src="https://via.placeholder.com/400x200" alt="ゲーム1">
+        <a href="https://suupia.github.io/my-portfolio/">
+          <img src="game00_Title.png" alt="ゲーム画像">
+        </a>
         <h3>ゲームタイトル1</h3>
         <p>簡単な説明を書きます。</p>
         <p>ゲームの特徴や工夫点など。</p>
         <p>ジャンルや制作期間など。</p>
-        <a href="#">▶ プレイ / 詳細</a>
       </div>
 
       <div class="card">
-        <img src="https://via.placeholder.com/400x200" alt="ゲーム2">
+        <a href="https://suupia.github.io/my-portfolio/">
+          <img src="game01_Title.png" alt="ゲーム画像">
+        </a>
         <h3>ゲームタイトル2</h3>
         <p>
             プレイヤーがキャラクターを操作してゴールを目指す、シンプルなアクションゲームです。
@@ -258,11 +289,12 @@
             ジャンル：2Dアクションゲーム<br>
             制作期間：約1か月
         </p>
-        <a href="#">▶ プレイ / 詳細</a>
       </div>
 
       <div class="card">
-        <img src="https://via.placeholder.com/400x200" alt="ゲーム3">
+        <a href="https://suupia.github.io/my-portfolio/">
+          <img src="game02_Title.png" alt="ゲーム画像">
+        </a>
         <h3>ゲームタイトル3</h3>
         <p>
             敵を倒しながらステージを進んでいく、シンプルなシューティングゲームを制作しました。
@@ -274,7 +306,6 @@
             ジャンル：2Dシューティングゲーム<br>
             制作期間：約1〜2か月
         </p>
-        <a href="#">▶ プレイ / 詳細</a>
       </div>
       
     </div>
